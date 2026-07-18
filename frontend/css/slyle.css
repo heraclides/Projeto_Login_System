@@ -1,5 +1,140 @@
-body{
-    background: #ececec;
-    color: red;
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #4F46E5, #2563EB);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*============================
+MAIN
+=============================*/
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/*============================
+SECTION
+=============================*/
+
+section {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding: 45px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
+}
+
+/*============================
+Form
+=============================*/
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 35px;
+}
+
+label {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .18);
+    color: white;
+    font-size: 15px;
+    transition: .3s;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, .7);
+}
+
+input:focus {
+    background: rgba(255, 255, 255, .28);
+    box-shadow: 0 0 15px rgba(255, 255, 255, .3);
+}
+
+button {
+    margin-top: 10px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #2563EB;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    background: #f3f4f6;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .2);
+}
+
+button:active {
+    transform: scale(.98);
+}
+
+/*============================
+Footer
+=============================*/
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+header {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 38px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 700;
 }
