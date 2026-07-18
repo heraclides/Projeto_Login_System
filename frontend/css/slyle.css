@@ -17,6 +17,21 @@ body {
 }
 
 /*============================
+mensagem de erro
+=============================*/
+.error-message {
+    background-color: #fce8e6;
+    color: #a83232;
+    border: 1px solid #f5c2c2;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-family: sans-serif
+}
+
+/*============================
 MAIN
 =============================*/
 
@@ -112,6 +127,80 @@ button:active {
     transform: scale(.98);
 }
 
+/* O fundo que cobre a tela inteira */
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Garante que fica por cima de tudo */
+}
+
+/* O card da mensagem */
+.alert-box {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: popup 0.3s ease-out; /* Efeito suave de abrir */
+}
+
+.alert-box h3 {
+  color: #e53935; /* Vermelho para erro */
+  margin-top: 0;
+  font-family: sans-serif;
+}
+
+.alert-box p {
+  color: #333;
+  font-size: 16px;
+  margin: 15px 0;
+  font-family: sans-serif;
+}
+
+/* Botão de validação/confirmação do usuário */
+#btnAlertConfirm {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#btnAlertConfirm:hover {
+  background-color: #c62828;
+}
+
+/* Quando for sucesso, mudamos a cor do título e do botão para verde */
+.alert-box.success h3 {
+  color: #2e7d32; /* Verde escuro */
+}
+
+.alert-box.success #btnAlertConfirm {
+  background-color: #2e7d32;
+}
+
+.alert-box.success #btnAlertConfirm:hover {
+  background-color: #1b5e20;
+}
+
+/* Animação para o card surgir de forma elegante */
+@keyframes popup {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
 /*============================
 Footer
 =============================*/
@@ -196,24 +285,24 @@ DARK MODE
     background: linear-gradient(135deg, #0F172A, #020617);
 }
 
-.dark section{
+.dark section {
 
-background:rgba(15,23,42,.55);
+    background: rgba(15, 23, 42, .55);
 
-border:1px solid rgba(255,255,255,.12);
-
-}
-
-.dark button{
-
-background:#2563EB;
-
-color:white;
+    border: 1px solid rgba(255, 255, 255, .12);
 
 }
 
-.dark button:hover{
+.dark button {
 
-background:#1D4ED8;
+    background: #2563EB;
+
+    color: white;
+
+}
+
+.dark button:hover {
+
+    background: #1D4ED8;
 
 }

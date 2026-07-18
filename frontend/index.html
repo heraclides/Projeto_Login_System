@@ -12,15 +12,21 @@
     <header>
         <h1>Login System</h1>
     </header>
+
+
     <main>
         <section>
             <form id="loginForm">
+
                 <h2>Login</h2>
+
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Digite seu email" name="email" required>
+                <input type="email" id="email" placeholder="Digite seu email" name="email">
 
                 <label for="password">Senha:</label>
-                <input type="password" id="password" placeholder="Digite sua senha" name="password" required>
+                <input type="password" id="password" placeholder="Digite sua senha" name="password">
+
+                <div id="message" class="error-message" style="display: none;"></div>
 
                 <button id="btnLogin" type="submit">Entrar</button>
             </form>
@@ -31,7 +37,14 @@
         <p>© 2023 Prof: Heraclides. Todos os direitos reservados.</p>
     </footer>
 
-
+    <!-- Janela flutuante de alerta (Modal) -->
+    <div id="customAlert" class="alert-overlay" style="display: none;">
+        <div class="alert-box">
+            <h3>Aviso do Sistema</h3>
+            <p id="alertMessage">Mensagem de erro aqui...</p>
+            <button id="btnAlertConfirm">Ok, entendi</button>
+        </div>
+    </div>
 
     <script src="./js/login.js"></script>
 </body>
