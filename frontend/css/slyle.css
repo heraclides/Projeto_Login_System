@@ -138,3 +138,82 @@ header h1 {
     letter-spacing: 2px;
     font-weight: 700;
 }
+
+/*=================================
+RESPONSIVIDADE
+=================================*/
+
+@media(max-width:768px) {
+    section {
+        width: 95%;
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    form h2 {
+        font-size: 28px;
+    }
+
+    input {
+        padding: 14px;
+        font-size: 14px;
+
+    }
+
+    button {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+@media(max-width:480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    form h2 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+}
+
+/*=================================
+DARK MODE
+=================================*/
+
+.dark {
+    background: linear-gradient(135deg, #0F172A, #020617);
+}
+
+.dark section{
+
+background:rgba(15,23,42,.55);
+
+border:1px solid rgba(255,255,255,.12);
+
+}
+
+.dark button{
+
+background:#2563EB;
+
+color:white;
+
+}
+
+.dark button:hover{
+
+background:#1D4ED8;
+
+}
