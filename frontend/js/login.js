@@ -105,3 +105,29 @@ btnAlertConfirm.addEventListener("click", () => {
         mostrarAlerta(null,null, tipo); // Reseta o tipo para erro para a próxima vez que o alerta for chamado
     }
 });
+
+/*==================================
+CONTROLE DO DARK MODE
+==================================*/
+const btnThemeToggle = document.querySelector("#themeToggle");
+const body = document.body;
+
+// Verifica se o usuário já tinha uma preferência salva anteriormente
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+    btnThemeToggle.textContent = "☀️"; // Ícone de Sol para voltar pro claro
+}
+
+btnThemeToggle.addEventListener("click", () => {
+    // Alterna a classe .dark no body
+    body.classList.toggle("dark");
+    
+    // Verifica se mudou para o dark ou light para salvar e trocar o ícone
+    if (body.classList.contains("dark")) {
+        btnThemeToggle.textContent = "☀️";
+        localStorage.setItem("theme", "dark");
+    } else {
+        btnThemeToggle.textContent = "🌙";
+        localStorage.setItem("theme", "light");
+    }
+});
